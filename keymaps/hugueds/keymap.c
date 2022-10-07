@@ -23,6 +23,11 @@ enum custom_keycodes {
     LAYER6,
 };
 
+// get pass from github env
+char* scania_pass = getenv("SCANIA_PASS");
+char* scania_user = getenv("SCANIA_USER");
+char* scania_admin = getenv("SCANIA_ADMIN");
+
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -82,3 +87,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
       
 };
+
+
+
+
+
+//qk_tap_dance_action_t tap_dance_actions[] = {
+//       [DANCE_0] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_0, dance_0_finished, dance_0_reset),
+//}; 
