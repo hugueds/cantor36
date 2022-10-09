@@ -24,9 +24,9 @@ enum custom_keycodes {
 };
 
 // get pass from github env
-char* scania_pass = getenv("SCANIA_PASS");
-char* scania_user = getenv("SCANIA_USER");
-char* scania_admin = getenv("SCANIA_ADMIN");
+//char* scania_pass = getenv("SCANIA_PASS");
+//char* scania_user = getenv("SCANIA_USER");
+//char* scania_admin = getenv("SCANIA_ADMIN");
 
 
 
