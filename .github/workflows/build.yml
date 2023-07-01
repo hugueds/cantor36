@@ -26,8 +26,11 @@ jobs:
       with:
         path: users/${{ github.actor }}
 
+    - name: Clean build environment
+      run: qmk clean -kb cantor36
+
     - name: Build firmware
-      run: qmk compile "users/${{ github.actor }}/cantor36.json"
+      run: qmk compile "users/${{ github.actor }}/cantor36.json" -kb cantor36
 
     - name: Archive firmware
       uses: actions/upload-artifact@v3
