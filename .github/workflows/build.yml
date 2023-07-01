@@ -27,7 +27,7 @@ jobs:
         path: users/${{ github.actor }}
 
     - name: Clean build environment
-      run: qmk clean -kb cantor
+      run: qmk clean
 
     - name: Build firmware
       run: qmk compile "users/${{ github.actor }}/cantor36.json" -kb cantor
