@@ -1,0 +1,35 @@
+# name: Firmware Build
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   release:
+#     types:
+#       - created
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
+
+#       - name: Set up QMK environment
+#         uses: qmkfm/qmk@1.3
+
+#       - name: Build firmware
+#         run: qmk compile -kb <keyboard_name> -km <keymap_name>
+
+#       - name: Create .bin artifact
+#         run: |
+#           cp <path_to_bin_file> firmware.bin
+#           echo "::set-output name=bin_path::firmware.bin"
+#         id: create_artifact
+
+#       - name: Upload .bin artifact
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: firmware
+#           path: ${{ steps.create_artifact.outputs.bin_path }}

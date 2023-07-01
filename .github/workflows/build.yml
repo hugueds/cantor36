@@ -27,7 +27,8 @@ jobs:
         path: users/${{ github.actor }}
 
     - name: Build firmware
-      run: qmk compile "users/${{ github.actor }}/"
+      run: qmk compile .
+
     - name: Archive firmware
       uses: actions/upload-artifact@v3
       continue-on-error: true
